@@ -9,6 +9,11 @@ import ProductById from './pages/ProductById'
 import NotFound from './pages/NotFound'
 import Checkout from './pages/Checkout'
 import Carts from './pages/Carts'
+import LogIn from './pages/LogIn'
+import SignUp from './pages/SignUp'
+import Profile from './pages/Profile'
+import Products from './pages/Products'
+import Order from './pages/Order'
 
 
 function App() {
@@ -17,6 +22,10 @@ function App() {
 			path: '/',
 			element: <Layout />,
 			children: [
+				{
+					path: '/signup',
+					element: <SignUp />,
+				},
 				{
 					index: true,
 					element: <Home />,
@@ -29,13 +38,15 @@ function App() {
 					path: 'contact',
 					element: <Contact />,
 				},
-				{
-					path: 'whishlist',
-					element: <Whishlist />,
-				},
+				
+				
 				{
 					path: 'product/:id',
 					element: <ProductById />,
+				},
+				{
+					path: 'Products',
+					element: <Products />,
 				},
 				{
 					path: '*',
@@ -49,6 +60,23 @@ function App() {
 					path: '/carts',
 					element: <Carts />,
 				},
+				{
+					path: '/profile',
+					element: <Profile />,
+				},
+				{
+					path: 'wishlist',
+					element: <Whishlist />,
+				},
+				{
+					path: '/login',
+					element: <LogIn />,
+				},
+				{
+					path: '/order',
+					element: <Order />,
+				},
+				
 			],
 		},
 	])
